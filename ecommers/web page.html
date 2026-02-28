@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ABS FASHION</title>
+<link rel="stylesheet" href="web page.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>ABS JWELLERY</h1>
+</div>
+
+<div class="product-container">
+
+  <div class="product">
+    <img src="pics/PLANE GOLD LONG CHAIN.jpeg">
+    <h2>GOLD LINK LONG CHAIN</h2>
+    <p>Price:120 </p>
+    <button class="order-btn" onclick="orderProduct('Product 1', 20)">Order via WhatsApp</button>
+  </div>
+
+  <div class="product">
+    <img src="pics/SILVER STONE DIAMOND EAR RING.jpeg">
+    <h2>SILVER STONE DIAMOND</h2>
+    <p>Price: 549</p>
+    <button class="order-btn" onclick="orderProduct('Product 2', 30)">Order via WhatsApp</button>
+  </div>
+
+  <div class="product">
+    <img src="https://via.placeholder.com/300x200.png?text=Product+1" alt="Product 1" />
+    <h2>Product Name 1</h2>
+    <p>Price: $20</p>
+    <button class="order-btn" onclick="orderProduct('Product 1', 20)">Order via WhatsApp</button>
+  </div>
+
+
+  <!-- Add more products as needed -->
+
+</div>
+
+<script>
+  function orderProduct(productName, price) {
+    const message = `Hello! I want to order: ${productName} costing $${price}.`;
+    const whatsappNumber = "8328346657"; // Replace with your WhatsApp number
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, '_blank');
+  }
+</script>
+
+</body>
+</html>
